@@ -5,20 +5,18 @@ import axios from "axios"
 import search from "../assets/images/search.png"
 import filter from "../assets/images/filter.png"
 import './home.css'
-
-
 //import reactLogo from './assets/react.svg'
+
+
 const Home = () => {
 
     const [characters, setCharacters] = useState([])
     const [allCharacters, setAllCharacters] = useState([])
-    //const [allCharactersUniverse, setAllCharactersUniverse] = useState([])
     const [buscador, setBuscador ] = useState("")
-    const [styleBtnBuscar, setStyleBtnBuscar] = useState('btn-1')
-    const [inputFiltroUiverseValue, setInputFiltroUniverseValue] = useState("")
+    //const [inputFiltroUiverseValue, setInputFiltroUniverseValue] = useState("")
     const [selectedUniverse, setSelectedUniverse] = useState("")
     const [openDropDownUniverse, setOpenDropDownUniverse] = useState(false)
-    const [filtroUniverso, setFiltroUniverso] = useState([])
+    const [styleBtnBuscar, setStyleBtnBuscar] = useState('btn-1')
 
 
     useEffect(()=> {
@@ -39,7 +37,7 @@ const Home = () => {
         let resultadoBusqueda = allCharacters.filter((element)=>{
             if(element.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
                 return element
-            } else if(element.universe.toString().includes(terminoBusqueda)){
+            } else if(element.universe === terminoBusqueda){
                 return element
             }
         });
@@ -57,12 +55,9 @@ const Home = () => {
         return false;
     })
     
-
     const changeStyleBtn = () => {
         setStyleBtnBuscar("btn-2")
     }
-
-
 
     return(
         <div className="text-white   mx-20">
@@ -71,7 +66,6 @@ const Home = () => {
                 <div className="relative">
                     <div className="block text-center">
 
-                    
                         <label htmlFor="buscador" className={`${styleBtnBuscar === 'btn-1' ? 'absolute top-1 left-14' : 'absolute top-1 left-52 transition-opacity'}`}>
                             <img className="w-7" src={search}></img>
                         </label>
@@ -87,18 +81,14 @@ const Home = () => {
                     </div>
                 </div>
                 
-                <div className="w-72 font-medium h-80" onClick={()=> setOpenDropDownUniverse(!openDropDownUniverse)} > 
+                <div onClick={()=> setOpenDropDownUniverse(!openDropDownUniverse)}>
+                <div className={`${openDropDownUniverse === false ? 'w-9 h-9 rounded-full bg-white' : 'w-56 h-28 bg-white rounded-lg transition-all'}`} > 
                      <div className="bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center">
                         <img className="py-1" src={filter} alt="Person Logo" />
                     </div>  
                        <ul className={`bg-white mt-2 text-black rounded-lg overflow-y-auto ${openDropDownUniverse ? 'max-h-60' : 'max-h-0'}`}>
                            <div className="flex items-center px-2 bg-white text-black">
-                               <input type="text" 
-                               value={inputFiltroUiverseValue}
-                               onChange={(e) => setInputFiltroUniverseValue(e.target.value.toLocaleLowerCase())}
-                               placeholder={`${selectedUniverse  ?  selectedUniverse : "Selecciona universo"}`}
-                               className="placeholder:text-black outline-none"
-                               />
+                               Universo {selectedUniverse}
                            </div>
                            
                            {
@@ -106,11 +96,13 @@ const Home = () => {
                                    return(
                                        <li 
                                        key={id}
+                                       className="bg-[#E2E2E2] cursor-pointer pl-2"
                                        onClick={() => {
                                            if(item.universe !== selectedUniverse){
                                              setSelectedUniverse(item.universe)
                                              setOpenDropDownUniverse(false)
                                              filtrar(item.universe)
+                                             
                                            }
                                        }}
                                        >
@@ -122,6 +114,9 @@ const Home = () => {
                        </ul>
                   
                 </div>
+
+                </div>
+                
                 
                 
 
@@ -133,7 +128,7 @@ const Home = () => {
             </div>
 
 
-            <div className="grid md:grid-cols-4 gap-10 mt-14">
+            <div className="grid md:grid-cols-4 gap-10 mt-60">
                 {
                     characters.map((item, id)=>{
                         return(

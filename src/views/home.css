@@ -79,6 +79,14 @@
         transition: width 1s;
     }
 
+    .selectedUniverse-1{
+        color: black;
+    }
+
+    .selectedUniverse-2{
+        color: red;
+    }
+
 /* .btn-ficha{
     visibility: hidden;
 }
