@@ -1,0 +1,8 @@
+.card{
+    background: radial-gradient(153.9% 81% at 50% 86.43%, #EBD300 0%, #CE0014 100%);
+    border: 3px solid #ffffff;
+    box-shadow: 0px 9px 16px;
+    border-radius: 10px;
+    width: 206px;
+    height: 221px;
+}

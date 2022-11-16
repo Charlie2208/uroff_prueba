@@ -1,0 +1,88 @@
+/* .bg-image{
+    position: absolute;
+    width: 699px;
+    height: 310px;
+    left: 370px;
+    top: 20px;
+    background-image: linear-gradient(180deg, rgba(206, 0, 20, 0) 0%, #A40010 20.46%, #000000 100%),
+    url("/src/assets/images/toppng.png")
+    ;
+} */
+
+.rectangule{
+    position: absolute;
+    width: 1440px;
+    height: 1565px;
+    left: 0px;
+    top: 0px;
+
+    background: linear-gradient(180deg, rgba(206, 0, 20, 0) 0%, #A40010 20.46%, #000000 100%);
+}
+
+.bg-image {
+    position: absolute;
+    width: 699px;
+    height: 310px;
+    left: 370px;
+    top: 20px;
+    background: url("/src/assets/images/toppng.png")
+    ;
+}
+
+
+.image-1{
+    position: absolute;
+    width: 369px;
+    height: 162px;
+    left: 535px;
+    top: 198px;
+    background: url("/src/assets/images/logoDragonball.png");
+}
+
+.titulo{
+    position: absolute;
+    width: 331px;
+    height: 44px;
+    left: 554px;
+    top: 336px;
+
+    /* font-family: 'Inter'; */
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-1{
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 100%;
+        color: #000;
+        
+    }
+
+    .btn-2{
+        width: 15rem;
+        height: 2.25rem;
+        color: #000;
+        text-align: right;
+        border-radius: 50px;
+        transition: width 1s;
+    }
+
+/* .btn-ficha{
+    visibility: hidden;
+}
+
+.btn-ficha:hover {
+    visibility: visible;
+} */
