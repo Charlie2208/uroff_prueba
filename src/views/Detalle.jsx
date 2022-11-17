@@ -30,7 +30,7 @@ const Detalle = () => {
             </div>
 
             
-            <Link to="/home ">
+            <Link to="/ ">
                 <p className="text-white link-home absolute top-14">Volver al incio</p>
             </Link>
      
