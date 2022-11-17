@@ -46,7 +46,7 @@ const Detalle = () => {
                     <h2 className="font-bold text-6xl text-white mb-8">{character.name}</h2>
                     <span className="universe">Universe {character.universe}</span>
 
-                    <div className="">
+                    <div className="mt-3">
                     
                         <InfoDetalle titulo="Specie" dato={character.specie} />
                         <InfoDetalle titulo="Role"dato={character.role} />
