@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import logoDragonball from "../assets/images/logoDragonball.png"
 import InfoDetalle from "../components/InfoDetalle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 
 import './detalle.css'
 
@@ -31,12 +33,8 @@ const Detalle = () => {
 
             
             <Link to="/ ">
-                <p className="text-white link-home absolute top-14">Volver al incio</p>
+                <p className="text-white link-home absolute top-14"><FontAwesomeIcon icon={faChevronLeft}  /> Volver al incio</p>
             </Link>
-     
-            
-          
-           
 
             <div className="grid grid-cols-2">
                 <div>
