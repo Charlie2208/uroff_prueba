@@ -1,4 +1,5 @@
 import { useParams } from "react-router";
+import { Link } from "react-router-dom"
 import { useState, useEffect } from "react";
 import axios from "axios";
 import logoDragonball from "../assets/images/logoDragonball.png"
@@ -27,6 +28,14 @@ const Detalle = () => {
             <div className="flex justify-center">
                 <img src={logoDragonball} className="" alt="" />
             </div>
+
+            
+            <Link to="/home ">
+                <p className="text-white link-home absolute top-14">Volver al incio</p>
+            </Link>
+     
+            
+          
            
 
             <div className="grid grid-cols-2">
@@ -37,7 +46,7 @@ const Detalle = () => {
                     <h2 className="font-bold text-6xl text-white mb-8">{character.name}</h2>
                     <span className="universe">Universe {character.universe}</span>
 
-                    <div className="">
+                    <div className="mt-3">
                     
                         <InfoDetalle titulo="Specie" dato={character.specie} />
                         <InfoDetalle titulo="Role"dato={character.role} />
