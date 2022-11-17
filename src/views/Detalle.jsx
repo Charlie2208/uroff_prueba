@@ -6,6 +6,7 @@ import logoDragonball from "../assets/images/logoDragonball.png"
 import InfoDetalle from "../components/InfoDetalle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons"
+import 'animate.css';
 
 import './detalle.css'
 
@@ -34,7 +35,7 @@ const Detalle = () => {
                 <p className="text-white link-home absolute top-14"><FontAwesomeIcon icon={faChevronLeft}  /> Volver al incio</p>
             </Link>
 
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 animate__animated animate__bounceIn animate__slow">
                 <div>
                     <img className="img-detalle" src={character.imageUrl} alt="" />
                 </div>

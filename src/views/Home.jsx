@@ -7,6 +7,7 @@ import filter from "../assets/images/filter.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass, faFilter} from "@fortawesome/free-solid-svg-icons"
 import './home.css'
+import 'animate.css';
 //import reactLogo from './assets/react.svg'
 
 
@@ -62,12 +63,7 @@ const Home = () => {
 
     return(
         <div className={`${characters.length <= 4 ? 'h-screen text-white   mx-20' : 'text-white   mx-20'} `}>
-            <div className="flex justify-between mt-24">
-
- 
- 
-            
-                
+            <div className="flex justify-between mt-24 ">
                 <div className="relative">
                     <div className="block text-center">
 
@@ -122,9 +118,9 @@ const Home = () => {
 
                 </div>
                 
-                <div className="bg-image"></div>
-                <div className="image-1"></div>
-                <h1 className="titulo">Prueba del dragón</h1>
+                <div className="bg-image animate__animated animate__pulse "></div>
+                <div className="image-1 animate__animated animate__pulse"></div>
+                <h1 className="titulo animate__animated animate__pulse">Prueba del dragón</h1>
            
             </div>
 
