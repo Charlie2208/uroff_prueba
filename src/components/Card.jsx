@@ -1,4 +1,5 @@
 import './card.css'
+import 'animate.css';
 
 const Card = ({name, universe, img}) =>{
     return(
