@@ -14,5 +14,10 @@
     
     background: radial-gradient(50% 50% at 50% 50%, #EBD300 0%, #CE0014 100%);
     
-    
 }
+
+.card img:hover{
+    width: 132px;
+    height: 180px;
+}
+    
