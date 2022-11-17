@@ -5,7 +5,7 @@ import axios from "axios"
 import search from "../assets/images/search.png"
 import filter from "../assets/images/filter.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {faBell, faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons"
+import { faMagnifyingGlass, faFilter} from "@fortawesome/free-solid-svg-icons"
 import './home.css'
 //import reactLogo from './assets/react.svg'
 
@@ -90,7 +90,7 @@ const Home = () => {
                 <div onClick={()=> setOpenDropDownUniverse(!openDropDownUniverse)}>
                 <div className={`${openDropDownUniverse === false ? 'w-9 h-9 rounded-full bg-white' : 'w-56 h-28 bg-white rounded-lg transition-all'}`} > 
                      <div className="bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center">
-                        <img className="py-1" src={filter} alt="Person Logo" />
+                     <FontAwesomeIcon icon={faFilter} className="py-1 w-6 h-6 text-black" />
                     </div>  
                        <ul className={`bg-white mt-2 text-black rounded-lg overflow-y-auto ${openDropDownUniverse ? 'max-h-60' : 'max-h-0'}`}>
                            <div className="flex items-center px-2 bg-white text-black">
