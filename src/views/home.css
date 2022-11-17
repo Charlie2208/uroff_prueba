@@ -74,9 +74,17 @@
         width: 15rem;
         height: 2.25rem;
         color: #000;
-        text-align: right;
+        text-align: left;
         border-radius: 50px;
         transition: width 1s;
+    }
+
+    .selectedUniverse-1{
+        color: black;
+    }
+
+    .selectedUniverse-2{
+        color: red;
     }
 
 /* .btn-ficha{
