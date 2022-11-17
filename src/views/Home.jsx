@@ -13,7 +13,6 @@ const Home = () => {
     const [characters, setCharacters] = useState([])
     const [allCharacters, setAllCharacters] = useState([])
     const [buscador, setBuscador ] = useState("")
-    //const [inputFiltroUiverseValue, setInputFiltroUniverseValue] = useState("")
     const [selectedUniverse, setSelectedUniverse] = useState("")
     const [openDropDownUniverse, setOpenDropDownUniverse] = useState(false)
     const [styleBtnBuscar, setStyleBtnBuscar] = useState('btn-1')
@@ -138,6 +137,7 @@ const Home = () => {
                                 universe={`universe ${item.universe}`}
                                 img={item.imageUrl}
                                 />
+                                
                                 <Link to={`/${item.name}`}>
                                     <button type="button" 
                                     className="btn-ficha text-transparent  hover:visible hover:text-[#1E1E1E] hover:bg-white hover:transition-all rounded-xl w-32 
@@ -145,6 +145,7 @@ const Home = () => {
                                         Ver Ficha
                                     </button>
                                 </Link>
+                                
                                 
                             </div>
                         )
