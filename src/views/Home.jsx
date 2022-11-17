@@ -140,7 +140,7 @@ const Home = () => {
                                 />
                                 <Link to={`/${item.name}`}>
                                     <button type="button" 
-                                    className="btn-ficha text-transparent  hover:visible hover:text-[#1E1E1E] hover:bg-white rounded-xl w-32 
+                                    className="btn-ficha text-transparent  hover:visible hover:text-[#1E1E1E] hover:bg-white hover:transition-all rounded-xl w-32 
                                     text-center ml-9">
                                         Ver Ficha
                                     </button>

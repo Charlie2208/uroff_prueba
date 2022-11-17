@@ -1,6 +1,6 @@
 import './card.css'
 
-const Card = ({name, universe, img}) =>{
+const Card = ({name, universe, img, textButton}) =>{
     return(
         <div className="card flex justify-center">
             <div className="h-56 text-center">
@@ -8,6 +8,7 @@ const Card = ({name, universe, img}) =>{
                 <p>{universe}</p>
                 <img className="w-32 h-44 mt-4" src={img} alt="" />
             </div>
+            <button>{textButton}</button>
         </div>
     )
 }
