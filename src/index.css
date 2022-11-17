@@ -12,9 +12,3 @@
     @apply bg-gradient-to-t  from-[#A40010] to-[#000000];
   }
 }
-
-/* body {
-
-  background: linear-gradient(180deg, rgba(206, 0, 20, 0) 0%, #A40010 20.46%, #000000 100%);
-  background-repeat: repeat;
-} */

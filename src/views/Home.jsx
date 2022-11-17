@@ -4,6 +4,8 @@ import Card from "../components/Card"
 import axios from "axios"
 import search from "../assets/images/search.png"
 import filter from "../assets/images/filter.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMagnifyingGlass, faFilter} from "@fortawesome/free-solid-svg-icons"
 import './home.css'
 //import reactLogo from './assets/react.svg'
 
@@ -61,12 +63,16 @@ const Home = () => {
     return(
         <div className="text-white   mx-20">
             <div className="flex justify-between mt-24">
+
+ 
+ 
+            
                 
                 <div className="relative">
                     <div className="block text-center">
 
-                        <label htmlFor="buscador" className={`${styleBtnBuscar === 'btn-1' ? 'absolute top-1 left-14' : 'absolute top-1 left-52 transition-opacity'}`}>
-                            <img className="w-7" src={search}></img>
+                        <label htmlFor="buscador" className={`${styleBtnBuscar === 'btn-1' ? 'absolute top-1 left-14 text-slate-700' : 'absolute top-1 left-52  ease-in duration-700 text-red-600'}`}>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} className="w-7" />
                         </label>
                         <input type="text"
                         value={buscador}
@@ -83,7 +89,7 @@ const Home = () => {
                 <div onClick={()=> setOpenDropDownUniverse(!openDropDownUniverse)}>
                 <div className={`${openDropDownUniverse === false ? 'w-9 h-9 rounded-full bg-white' : 'w-56 h-28 bg-white rounded-lg transition-all'}`} > 
                      <div className="bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center">
-                        <img className="py-1" src={filter} alt="Person Logo" />
+                     <FontAwesomeIcon icon={faFilter} className="py-1 w-6 h-6 text-black" />
                     </div>  
                        <ul className={`bg-white mt-2 text-black rounded-lg overflow-y-auto ${openDropDownUniverse ? 'max-h-60' : 'max-h-0'}`}>
                            <div className="flex items-center px-2 bg-white text-black">
@@ -116,10 +122,6 @@ const Home = () => {
 
                 </div>
                 
-                
-                
-
-
                 <div className="bg-image"></div>
                 <div className="image-1"></div>
                 <h1 className="titulo">Prueba del dragón</h1>
