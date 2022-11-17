@@ -25,8 +25,6 @@ const Detalle = () => {
 
     return(
         <div className="mx-20 h-screen">
-
-            
             <div className="flex justify-center">
                 <img src={logoDragonball} className="" alt="" />
             </div>

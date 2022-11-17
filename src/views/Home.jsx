@@ -61,7 +61,7 @@ const Home = () => {
     }
 
     return(
-        <div className="text-white   mx-20">
+        <div className={`${characters.length <= 4 ? 'h-screen text-white   mx-20' : 'text-white   mx-20'} `}>
             <div className="flex justify-between mt-24">
 
  
