@@ -61,6 +61,19 @@ const Home = () => {
         setStyleBtnBuscar("btn-2")
     }
 
+    let ordenMayorMenor = filtrados
+
+    ordenMayorMenor.sort(((a, b) => b.universe - a.universe))
+
+    ordenMayorMenor.reverse(((a, b) => b.universe - a.universe))
+
+
+    // function comparar(a, b) {
+    //     return a - b;
+    //   }
+
+
+
     return(
         <div className={`${characters.length <= 4 ? 'h-screen text-white   mx-20' : 'text-white   mx-20'} `}>
             <div className="flex justify-between mt-24 ">
@@ -92,8 +105,8 @@ const Home = () => {
                                Universo {selectedUniverse}
                            </div>
                            
-                           {
-                               filtrados.map((item, id)=>{
+                           {  
+                               ordenMayorMenor.map((item, id)=>{
                                    return(
                                        <li 
                                        key={id}
