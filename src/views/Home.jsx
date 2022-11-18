@@ -18,6 +18,7 @@ const Home = () => {
     const [buscador, setBuscador ] = useState("")
     const [selectedUniverse, setSelectedUniverse] = useState("")
     const [openDropDownUniverse, setOpenDropDownUniverse] = useState(false)
+    const [open, setOpen] = useState(false)
     const [styleBtnBuscar, setStyleBtnBuscar] = useState('btn-1')
 
 
@@ -56,30 +57,21 @@ const Home = () => {
         }
         return false;
     })
+
+    const ordenMayorMenor = filtrados
+    ordenMayorMenor.sort(((a, b) => b.universe - a.universe))
+    ordenMayorMenor.reverse(((a, b) => b.universe - a.universe))
     
     const changeStyleBtn = () => {
         setStyleBtnBuscar("btn-2")
     }
-
-    let ordenMayorMenor = filtrados
-
-    ordenMayorMenor.sort(((a, b) => b.universe - a.universe))
-
-    ordenMayorMenor.reverse(((a, b) => b.universe - a.universe))
-
-
-    // function comparar(a, b) {
-    //     return a - b;
-    //   }
-
-
 
     return(
         <div className={`${characters.length <= 4 ? 'h-screen text-white   mx-20' : 'text-white   mx-20'} `}>
             <div className="flex justify-between mt-24 ">
                 <div className="relative">
                     <div className="block text-center">
-
+        
                         <label htmlFor="buscador" className={`${styleBtnBuscar === 'btn-1' ? 'absolute top-1 left-14 text-slate-700' : 'absolute top-1 left-52  ease-in duration-700 text-red-600'}`}>
                         <FontAwesomeIcon icon={faMagnifyingGlass} className="w-7" />
                         </label>
@@ -88,20 +80,23 @@ const Home = () => {
                         placeholder={buscador}
                         onChange={handleChange}
                         onClick={changeStyleBtn}
-                        className={`${styleBtnBuscar}`}
+                        className={`${styleBtnBuscar} pl-3`}
                         id="buscador"
                         />
                         <span className="flex flex-row">Buscar por nombre</span>
                     </div>
                 </div>
                 
-                <div onClick={()=> setOpenDropDownUniverse(!openDropDownUniverse)}>
-                <div className={`${openDropDownUniverse === false ? 'w-9 h-9 rounded-full bg-white' : 'w-56 h-28 bg-white rounded-lg transition-all'}`} > 
-                     <div className="bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center">
+                <div 
+                    onMouseEnter={() => setOpenDropDownUniverse(!openDropDownUniverse)}
+                    onMouseLeave={() => setOpenDropDownUniverse(false)}
+                >
+                <div className={`${openDropDownUniverse === false ? 'w-9 h-9 rounded-full bg-white' : 'w-56 h-28 bg-white rounded-lg animate__animated animate__slideInLeft'}`} > 
+                     <div className={`${openDropDownUniverse === false ? 'bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center' : 'bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center absolute right-2' }`}>
                      <FontAwesomeIcon icon={faFilter} className="py-1 w-6 h-6 text-black" />
                     </div>  
                        <ul className={`bg-white mt-2 text-black rounded-lg overflow-y-auto ${openDropDownUniverse ? 'max-h-60' : 'max-h-0'}`}>
-                           <div className="flex items-center px-2 bg-white text-black">
+                           <div className="flex items-center py-2 px-2 bg-white text-black">
                                Universo {selectedUniverse}
                            </div>
                            
@@ -155,9 +150,7 @@ const Home = () => {
                                     text-center ml-9">
                                         Ver Ficha
                                     </button>
-                                </Link>
-                                
-                                
+                                </Link>   
                             </div>
                         )
                     })
