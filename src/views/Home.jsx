@@ -96,7 +96,10 @@ const Home = () => {
                         <div className={`${openDropDownUniverse === false ? 'bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center' : 'bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center absolute right-2' }`}>
                             <FontAwesomeIcon icon={faFilter} className="py-1 w-6 h-6 text-black" />
                         </div> 
-                            <div>
+                            <div className="">
+                                    <div>
+                                        <p className={`${openDropDownUniverse === false ?'absolute right-11' : 'absolute right-11 top-11'} ${open ? 'hidden' : 'visible'}`}>Filtrar  universos</p> 
+                                    </div>
                                 
                                 <ul className={`bg-white mt-2 text-black rounded-lg overflow-y-auto ${openDropDownUniverse ? 'max-h-9 ' : 'max-h-0'} ${open ? 'max-h-48' : 'max-h-0'}`}>
                                     <div className='flex items-center py-2 px-2 bg-white text-black cursor-pointer'>
@@ -125,10 +128,15 @@ const Home = () => {
                                         }
                             
                                 </ul>
-                            </div>            
+                            </div>      
+                            
                     </div>
 
+                    
+
                 </div>
+
+                
                 
                 <div className="bg-image animate__animated animate__pulse "></div>
                 <div className="image-1 animate__animated animate__pulse"></div>
