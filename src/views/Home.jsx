@@ -2,13 +2,10 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Card from "../components/Card"
 import axios from "axios"
-import search from "../assets/images/search.png"
-import filter from "../assets/images/filter.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass, faFilter} from "@fortawesome/free-solid-svg-icons"
 import './home.css'
 import 'animate.css';
-//import reactLogo from './assets/react.svg'
 
 
 const Home = () => {
