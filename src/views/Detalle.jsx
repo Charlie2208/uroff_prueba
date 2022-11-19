@@ -32,7 +32,7 @@ const Detalle = () => {
 
             
             <Link to="/ ">
-                <p className="text-white link-home absolute top-14"><FontAwesomeIcon icon={faChevronLeft}  /> Volver al incio</p>
+                <p className="text-white link-home absolute top-14 font-semibold text-lg"><FontAwesomeIcon icon={faChevronLeft}  /> Volver al incio</p>
             </Link>
 
             <div className="grid grid-cols-2 animate__animated animate__bounceIn animate__slow">
