@@ -101,7 +101,7 @@ const Home = () => {
                                         <p className={`${openDropDownUniverse === false ?'absolute right-11' : 'absolute right-11 top-11'} ${open ? 'hidden' : 'visible'}`}>Filtrar  universos</p> 
                                     </div>
                                 
-                                <ul className={`bg-white mt-2 text-black rounded-lg overflow-y-auto ${openDropDownUniverse ? 'max-h-9 ' : 'max-h-0'} ${open ? 'max-h-48' : 'max-h-0'}`}>
+                                <ul className={`bg-white mt-2 text-black rounded-lg overflow-y-auto ${openDropDownUniverse ? 'max-h-9 ' : 'max-h-0'} ${open ? 'max-h-48' : 'max-h-0'} ${openDropDownUniverse === false ? 'hidden' :''}`}>
                                     <div className='flex items-center py-2 px-2 bg-white text-black cursor-pointer'>
                                         Universo {selectedUniverse}
                                     </div>
