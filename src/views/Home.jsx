@@ -90,39 +90,43 @@ const Home = () => {
                 <div 
                     onMouseEnter={() => setOpenDropDownUniverse(!openDropDownUniverse)}
                     onMouseLeave={() => setOpenDropDownUniverse(false)}
+                    onClick={()=> setOpen(!open)}
                 >
-                <div className={`${openDropDownUniverse === false ? 'w-9 h-9 rounded-full bg-white' : 'w-56 h-28 bg-white rounded-lg animate__animated animate__slideInLeft'}`} > 
-                     <div className={`${openDropDownUniverse === false ? 'bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center' : 'bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center absolute right-2' }`}>
-                     <FontAwesomeIcon icon={faFilter} className="py-1 w-6 h-6 text-black" />
-                    </div>  
-                       <ul className={`bg-white mt-2 text-black rounded-lg overflow-y-auto ${openDropDownUniverse ? 'max-h-60' : 'max-h-0'}`}>
-                           <div className="flex items-center py-2 px-2 bg-white text-black">
-                               Universo {selectedUniverse}
-                           </div>
-                           
-                           {  
-                               ordenMayorMenor.map((item, id)=>{
-                                   return(
-                                       <li 
-                                       key={id}
-                                       className="bg-[#E2E2E2] cursor-pointer pl-2"
-                                       onClick={() => {
-                                           if(item.universe !== selectedUniverse){
-                                             setSelectedUniverse(item.universe)
-                                             setOpenDropDownUniverse(false)
-                                             filtrar(item.universe)
-                                             
-                                           }
-                                       }}
-                                       >
-                                           Universo {item.universe}
-                                       </li>
-                                   )
-                               })
-                            }
-                       </ul>
-                  
-                </div>
+                    <div className={`${openDropDownUniverse === false ? 'w-9 h-9 rounded-full bg-white' : 'w-56 h-9 bg-white rounded-lg animate__animated animate__slideInLeft'}`} > 
+                        <div className={`${openDropDownUniverse === false ? 'bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center' : 'bg-white rounded-full h-9 w-9 overflow-hidden flex justify-center absolute right-2' }`}>
+                            <FontAwesomeIcon icon={faFilter} className="py-1 w-6 h-6 text-black" />
+                        </div> 
+                            <div>
+                                
+                                <ul className={`bg-white mt-2 text-black rounded-lg overflow-y-auto ${openDropDownUniverse ? 'max-h-9 ' : 'max-h-0'} ${open ? 'max-h-48' : 'max-h-0'}`}>
+                                    <div className='flex items-center py-2 px-2 bg-white text-black cursor-pointer'>
+                                        Universo {selectedUniverse}
+                                    </div>
+                                    
+                                    {  
+                                        ordenMayorMenor.map((item, id)=>{
+                                            return(
+                                                <li 
+                                                key={id}
+                                                className="bg-[#E2E2E2] cursor-pointer pl-2"
+                                                onClick={() => {
+                                                    if(item.universe !== selectedUniverse){
+                                                        setSelectedUniverse(item.universe)
+                                                        setOpenDropDownUniverse(false)
+                                                        filtrar(item.universe)
+                                                        
+                                                    }
+                                                }}
+                                                >
+                                                    Universo {item.universe}
+                                                </li>
+                                            )
+                                        })
+                                        }
+                            
+                                </ul>
+                            </div>            
+                    </div>
 
                 </div>
                 
